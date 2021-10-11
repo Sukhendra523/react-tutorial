@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from "react";
+//////////////////////Forwarding Refs//////////////////
 // function FRInput() {
 //   return (
 //     <div>
@@ -9,11 +9,11 @@ import React from 'react'
 // }
 
 const FRInput = React.forwardRef((props, ref) => {
-	return (
-		<div>
+  return (
+    <div>
       <input type="text" ref={ref} />
-		</div>
-	)
-})
+    </div>
+  );
+});
 
-export default FRInput
+export default FRInput;

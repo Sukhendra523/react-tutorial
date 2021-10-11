@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class UserGreeting extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      isLoggedIn: true
-    }
+      isLoggedIn: true,
+    };
   }
-
+  ////////////////////// Conditional Rendering //////////////////
   // #if-else approach
   // render() {
   //   if (this.state.isLoggedIn) {
@@ -18,7 +18,7 @@ class UserGreeting extends Component {
   //   }
   // }
 
-  // #element-variables approach
+  // #let element-variables approach
   // render() {
   //   let message
   //   if (this.state.isLoggedIn) {
@@ -40,8 +40,8 @@ class UserGreeting extends Component {
 
   // #short-circuit-operator-approach
   render() {
-    return this.state.isLoggedIn && <div>Welcome Vishwas</div>
+    return this.state.isLoggedIn && <div>Welcome Vishwas</div>;
   }
 }
 
-export default UserGreeting
+export default UserGreeting;

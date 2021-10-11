@@ -1,31 +1,43 @@
-import React from 'react'
-import Person from './Person'
+import React from "react";
+import Person from "./Person";
 
+//////////////List Rendering/////////////////
 function NameList() {
-  const names = ['Bruce', 'Clark', 'Diana', 'Bruce']
+  const names = ["Bruce", "Clark", "Diana", "Bruce"];
   const persons = [
     {
       id: 1,
-      name: 'Bruce',
+      name: "Bruce",
       age: 30,
-      skill: 'React'
+      skill: "React",
     },
     {
       id: 2,
-      name: 'Clark',
+      name: "Clark",
       age: 25,
-      skill: 'Angular'
+      skill: "Angular",
     },
     {
       id: 3,
-      name: 'Diana',
+      name: "Diana",
       age: 28,
-      skill: 'Vue'
-    }
-  ]
-  const personList = persons.map(person => <Person key={person.id} person={person} />)
-  const nameList = names.map((name, index) => <h2 key={index}>{index} {name}</h2>)
-  return <div>{nameList}</div>
+      skill: "Vue",
+    },
+  ];
+  const personList = persons.map((person) => (
+    <Person key={person.id} person={person} />
+  ));
+  const nameList = names.map((name, index) => (
+    <h2 key={index}>
+      {index} {name}
+    </h2>
+  ));
+  return (
+    <>
+      <div>{nameList}</div>
+      <div>{personList}</div>
+    </>
+  );
 }
 
-export default NameList
+export default NameList;
